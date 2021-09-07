@@ -3,7 +3,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="index.css">
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     </head>
 
@@ -21,7 +21,10 @@
             <a href="8D/8D.html">8D Report</a>
         </div>
         This page creates new Q Numbers. Enter the details and tick the boxes for the correct types, and a new entry will be made into the database. For type specific details, please see the individual type pages.
-        <div id="form">
+        <div>
+            <table class="form">
+            <tr>
+            <th id="details">
             <h2>Details:</h2>
             <label for="PartNumber">Part Number*:</label>
             <input type="text" id="PartNumber" placeholder="Part Number"><br>
@@ -43,7 +46,9 @@
 
             <label for="Description">Description:</label>
             <input type="text" id="Description" placeholder="Description"><br>
+            </th>
 
+            <th>
             <h2>Type:</h2>
             <label for="RU">Returned Unit:</label>
             <input type="checkbox" id="RU"><br>
@@ -107,8 +112,11 @@
 
             <label for="Other">Other:</label>
             <input type="checkbox" id="Other"><br>
-
+            </th>
+	    </table>
+            <center>
             <button id="newQNumber">Submit</button>
+            </center>
             <script src="newQNumber.js"></script>
         </div>
     </body>

@@ -1,4 +1,4 @@
-CREATE TABLE `8d` (
+CREATE TABLE '8d` (
   `QNumber` char(9) NOT NULL,
   `PartNumber` longtext DEFAULT NULL,
   `DrawingNumber` longtext DEFAULT NULL,

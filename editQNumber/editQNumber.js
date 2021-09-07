@@ -10,9 +10,10 @@ $("#findQNumber").click(function() {
                 $("#qNumber").prop("disabled",true);
                 $("#findQNumber").prop("disabled",true);
                 $("#form").show("slide",{},500);
+		$("#submit").show("slide",{},500);
                 qNumber = qNumber.charAt(0).toUpperCase() + qNumber.slice(1);
                 $("#selected").html("Selected Q Number: " + qNumber);
-                $.post(
+                $.post(	`
                     "datadump.php",
                     {"qNumber": qNumber},
                     function(data){
@@ -54,7 +55,8 @@ $("#findQNumber").click(function() {
                         $("#StopNote").attr("checked",row[25]);
                         $("#QualityAlert").attr("checked",row[26]);
                         $("#DebitNote").attr("checked",row[27]);
-                        $("#Other").attr("checked",row[28]);
+                        $("#ASME").attr("checked",row[28]);
+                        $("#Other").attr("checked",row[29]);
                     }
                 )
             }

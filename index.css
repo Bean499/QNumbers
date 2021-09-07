@@ -33,21 +33,30 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
+}
+
+table, th {
+  vertical-align: top;
+  align: center;
+}
+
+table {
+  width: 100%
 }
 
 th {
-  font-size: 14px
+  width:50%
 }
 
-table, th, td {
-  text-align: center;
+.gray {
+  vertical-align: top;
+  align: center;
   border: 1px solid black;
   border-collapse: collapse;
 }
 
-td {
-  font-size: 12px;
+td {	
+  font-size: 14px;
 }
 
 .gray {
@@ -63,10 +72,10 @@ td {
   margin-bottom: 25px;
 }
 
-.form {
-  border: none,
+#newQNumber {
+  font-size: 20px
 }
 
-p {
-  display: inline
+#details {
+  line-height: 30px
 }

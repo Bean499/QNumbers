@@ -43,6 +43,7 @@ $CurrentYear = $_POST["CurrentYear"];
 $ShortYear = $CurrentYear[2].$CurrentYear[3];
 
 $sql = "SELECT * FROM main WHERE YEAR(DateAdded) = ?";
+//$sql = "SELECT * FROM main WHERE SUBSTRING(QNumber,1,2) = ?";
 $stmt = mysqli_stmt_init($conn);
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -53,7 +54,7 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
 mysqli_stmt_bind_param($stmt, "s", $CurrentYear); //This copies in the year to find
 mysqli_stmt_execute($stmt);
 mysqli_stmt_store_result($stmt);
-$EntryNumber = mysqli_stmt_num_rows($stmt);
+$EntryNumber = mysqli_stmt_num_rows($stmt) + 1;
 
 $EntryNumber = (string) $EntryNumber;
 while (strlen($EntryNumber) < 5) {
@@ -84,8 +85,10 @@ $year = substr($QNumber,0,3);   //Q21-00000
 $hundred = substr($QNumber,0,7)."00";   //Q21-12300
 //Q21-12345
 
-$directory = "qnumbers/".$year."/".$hundred."/"."/".$QNumber;
+$directory = "D:/Workgroups/Quality & HSE/Q Numbers/".$year."/".$hundred."/"."/".$QNumber;
 mkdir($directory,0777,true);
+
+//Q21/Q21-12300/Q21-12345
 
 die();
 exit();

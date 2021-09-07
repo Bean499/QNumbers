@@ -218,7 +218,7 @@ CREATE TABLE `ru` (
 --
 
 INSERT INTO `ru` (`QNumber`, `PartNumber`, `DrawingNumber`, `Originator`, `Customer`, `SerialNumber`, `SalesNumber`, `Description`, `DateAdded`, `Type`, `ReturnNumber`, `DefectCode`, `Status`, `TotalQuantity`, `QuantityAccepted`, `QuantityRejected`, `RejectNote`, `DebitNote`, `ClaimValue`, `ScrapDate`, `Notes`) VALUES
-('q21-00001', '2', '2', 'Ben', 'Ben', '2', '2', 'Test', '2021-06-03', 'RE', '404', '444', 'Done', 30, 17, 13, '', 'Q21-00006', 'Â£3003', '2021-07-24', 'This is a test');
+('q21-00001', '2', '2', 'Ben', 'Ben', '2', '2', 'Test', '2021-06-03', 'RE', '404', '444', 'Done', 30, 17, 13, '', 'Q21-00006', '£3003', '2021-07-24', 'This is a test');
 
 --
 -- Indexes for dumped tables
