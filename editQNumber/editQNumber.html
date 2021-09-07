@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="topnav">
+            <b>Thermex Q Numbers</b>
+            <a href="../index.html">New Q Number</a>
+            <a href="editQNumber.html">Edit Q Number</a>
+            <a href="../TableView/tableview.html">Table View</a>
+            <a href="../search/search.html">Search Q Numbers</a>
+            <a href="../rfq/RFQ.html">RFQ</a>
+            <a href="../CN/CN.html">CN</a>
+            <a href="../RU/RU.html">RU</a>
+            <a href="../8D/8D.html">8D Report</a>
+        </div>
+        <div class="intro">
+            This page edits existing Q Numbers. Enter the desired Q Number and an editing field will be displayed where you can change its details, incluing what types it is.
+        </div>
+        <br><label for="qNumber"></label>
+        <input type="text" id="qNumber" maxlength="9" placeholder="Q Number"></br>
+        <button type="submit" id="findQNumber">Find Q Number</button>
+        <div id="selected"></div>
+
+        <div id="form">
+            <h2>Details:</h2>
+            <label for="PartNumber">Part Number*:</label>
+            <input type="text" id="PartNumber" placeholder="Part Number"><br>
+
+            <label for="DrawingNumber">Drawing Number*:</label>
+            <input type="text" id="DrawingNumber" placeholder="Drawing Number"><br>
+
+            <label for="Originator">Originator*:</label>
+            <input type="text" id="Originator" placeholder="Originator"><br>
+
+            <label for="Customer">Customer*:</label>
+            <input type="text" id="Customer" placeholder="Customer"><br>
+
+            <label for="Sales/Order Number">Sales/Order Number:</label>
+            <input type="text" id="SalesNumber" placeholder="Sales/Order Number"><br>
+
+            <label for="Serial Number">Serial Number:</label>
+            <input type="text" id="SerialNumber" placeholder="Serial Number"><br>
+
+            <label for="Description">Description:</label>
+            <input type="text" id="Description" placeholder="Description"><br>
+
+            <h2>Type:</h2>
+            <label for="RU">Returned Unit:</label>
+            <input type="checkbox" id="RU"><br>
+
+            <label for="CU">Customer Unit:</label>
+            <input type="checkbox" id="CU"><br>
+
+            <label for="8D">8D Report:</label>
+            <input type="checkbox" id="8D"><br>
+
+            <label for="CN">Change Note:</label>
+            <input type="checkbox" id="CN"><br>
+
+            <label for="ECNDR">ECN DR:</label>
+            <input type="checkbox" id="ECNDR"><br>
+
+            <label for="ISIR">Inspection Report:</label>
+            <input type="checkbox" id="ISIR"><br>
+
+            <label for="PSW">PSW Submisison:</label>
+            <input type="checkbox" id="PSW"><br>
+
+            <label for="ELV">End of Live Vehicle Data:</label>
+            <input type="checkbox" id="ELV"><br>
+
+            <label for="RFQ">Request for Quote:</label>
+            <input type="checkbox" id="RFQ"><br>
+
+            <label for="NPI">New Product Introduction:</label>
+            <input type="checkbox" id="NPI"><br>
+            
+            <label for="CofC">Certificate of Conformity:</label>
+            <input type="checkbox" id="CofC"><br>
+
+            <label for="TestCert">Test Certificate:</label>
+            <input type="checkbox" id="TestCert"><br>
+
+            <label for="Concession">Concession:</label>
+            <input type="checkbox" id="Concession"><br>
+
+            <label for="DesignReview">Design Review:</label>
+            <input type="checkbox" id="DesignReview"><br>
+
+            <label for="StockFreeze">Stock Freeze:</label>
+            <input type="checkbox" id="StockFreeze"><br>
+
+            <label for="RejectNote">Reject Note:</label>
+            <input type="checkbox" id="RejectNote"><br>
+
+            <label for="StopNote">Stop Note:</label>
+            <input type="checkbox" id="StopNote"><br>
+
+            <label for="QualityAlert">Quality Alert:</label>
+            <input type="checkbox" id="QualityAlert"><br>
+
+            <label for="DebitNote">Debit Note:</label>
+            <input type="checkbox" id="DebitNote"><br>
+
+            <label for="ASME">ASME Data Pack:</label>
+            <input type="checkbox" id="ASME"><br>
+
+            <label for="Other">Other:</label>
+            <input type="checkbox" id="Other"><br>
+
+            <button id="submit">Submit</button>
+            <script src="editQNumber.js"></script>
+        </div>
+    </body>
+</html>

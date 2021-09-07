@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="../style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+
+        <div class="topnav">
+            <b>Thermex Q Numbers</b>
+            <a href="../index.html">New Q Number</a>
+            <a href="../editQNumber/editQNumber.html">Edit Q Number</a>
+            <a href="../TableView/tableview.html">Table View</a>
+            <a href="../search/search.html">Search Q Numbers</a>
+            <a href="../rfq/RFQ.html">RFQ</a>
+            <a href="../CN/CN.html">CN</a>
+            <a href="../RU/RU.html">RU</a>
+            <a href="../8D/8D.html">8D Report</a>
+        </div>
+        <div class="intro">
+            This page lets you make an entry in the CN table. Enter a Q Number, and if it is a Q Number which is an CN, you will be able to either make an entry if it does not have one, or modify its existing entry.
+            <br><a href="CNTable.html">Click here to view all Content Notes in a table</a>
+        </div>
+        <br><label for="qNumber"></label>
+        <input type="text" id="qNumber" maxlength="9" placeholder="Q Number"></br>
+        <button type="submit" id="findCN">Find Q Number</button>
+        <div id="selected"></div>
+        <div id="form">
+            <label for="DateClosed">Date Closed:</label>
+            <input type="date" id="DateClosed"> <br>
+
+            <label for="ClosedBy">Closed By:</label>
+            <input type="text" id="ClosedBy" placeholder="Closed By">
+
+            <button type="submit" id="submit">Submit</button>
+        </div>
+        <script src="findCN.js"></script>
+    </body>
+
+</html>
