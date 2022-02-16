@@ -1,20 +1,23 @@
 $("#newQNumber").click( function() {
     console.log("I know that the button has been pressed.");
 
-    now = new Date()
+    //now = new Date()
 
-    month = now.getMonth().toString();
-    if (month.length == 1) {
-        month = "0" + month
-    }
+    //month = now.getMonth().toString();
+    //if (month.length == 1) {
+    //    month = "0" + month
+    //}
 
-    day = now.getDay().toString();
-    if (day.length == 1) {
-        day = "0" + day
-    }
+    //day = now.getDay().toString();
+    //if (day.length == 1) {
+    //    day = "0" + day
+    //}
 
-    date = now.getFullYear().toString() + "-" + month + "-" + day;
+    //date = now.getFullYear().toString() + "-" + month + "-" + day;
     
+    date = new Date().toISOString().slice(0, 10);
+    currentYear = date.substring(2,4);
+    console.log(date)
     //I'm so sorry, this block of an object literal is disgusting to look at
     data = {
         "PartNumber": $("#PartNumber").val(),
@@ -47,7 +50,7 @@ $("#newQNumber").click( function() {
         "Other": $("#Other").is(':checked'),
 
         "Date": date,
-        "CurrentYear": new Date().getFullYear()
+        "CurrentYear": currentYear
     }
 
     console.log(data);

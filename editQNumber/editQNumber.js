@@ -13,7 +13,7 @@ $("#findQNumber").click(function() {
 		$("#submit").show("slide",{},500);
                 qNumber = qNumber.charAt(0).toUpperCase() + qNumber.slice(1);
                 $("#selected").html("Selected Q Number: " + qNumber);
-                $.post(	`
+                $.post(
                     "datadump.php",
                     {"qNumber": qNumber},
                     function(data){
@@ -121,7 +121,7 @@ $("#submit").click(function(){
             "editQNumber.php",
             data,
             function(message){
-                alert(message)
+                //alert(message)
             }
         )
     }

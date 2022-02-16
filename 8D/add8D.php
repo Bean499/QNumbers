@@ -9,7 +9,7 @@ if(!isset($_POST["qNumber"])) {
 
 require "../dbaccess.php";
 
-$qNumber = ucfirst($_POST["qNumber"];)
+$qNumber = ucfirst($_POST["qNumber"]);
 $DateClosed = $_POST["DateClosed"];
 $QuantityRejected = $_POST["QuantityRejected"];
 $PRSSendDate = $_POST["PRSSendDate"];
@@ -63,11 +63,11 @@ if ($num8D===0) {
     exit();
 }
 else {
-    $sql = "UPDATE rfq SET DateClosed = ?, NetworkDays = ?, QuantityRejected = ?, PRSSendDate = ?, PRSReceived = ?, RejectNote = ?, DefectCode = ?, QualityConcern = ?, Status = ?, DebitNote = ?, ScrapDate = ?, Note = ? WHERE QNumber = ?";
+    $sql = "UPDATE 8D SET DateClosed = ?, NetworkDays = ?, QuantityRejected = ?, PRSSendDate = ?, PRSReceived = ?, RejectNote = ?, DefectCode = ?, QualityConcern = ?, Status = ?, DebitNote = ?, ScrapDate = ?, Notes = ? WHERE QNumber = ?";
     $stmt = mysqli_stmt_init($conn);
 
     mysqli_stmt_prepare($stmt,$sql);
-    mysqli_stmt_bind_param($stmt, "siiissssssss", $DateClosed, $NetworkDays, $QuantityRejected, $PRSSendDate, $PRSReceived, $RejectNote, $DefectCode, $QualityConcern, $Status, $DebitNote, $ScrapDate, $Notes, $qNumber);
+    mysqli_stmt_bind_param($stmt, "siissssssssss", $DateClosed, $NetworkDays, $QuantityRejected, $PRSSendDate, $PRSReceived, $RejectNote, $DefectCode, $QualityConcern, $Status, $DebitNote, $ScrapDate, $Notes, $qNumber);
     $check = mysqli_stmt_execute($stmt);
 
     if ($check === FALSE) {

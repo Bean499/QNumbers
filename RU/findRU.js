@@ -61,6 +61,14 @@ $("#submit").click(function(){
         "Notes": $("#Notes").val(),
     }
     
+    if(data.QuantityAccepted == ""){
+        data.QuantityAccepted = 0;
+    }
+
+    if(data.QuantityRejected == ""){
+        data.QuantityRejected = 0;
+    }
+
     $.post(
         "addRU.php",
         data,

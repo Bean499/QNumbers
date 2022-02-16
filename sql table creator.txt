@@ -1,143 +1,143 @@
-CREATE TABLE '8d` (
-  `QNumber` char(9) NOT NULL,
-  `PartNumber` longtext DEFAULT NULL,
-  `DrawingNumber` longtext DEFAULT NULL,
-  `Originator` tinytext DEFAULT NULL,
-  `Customer` tinytext DEFAULT NULL,
-  `SerialNumber` tinytext DEFAULT NULL,
-  `SalesNumber` tinytext DEFAULT NULL,
-  `Description` longtext DEFAULT NULL,
-  `DateAdded` date NOT NULL,
-  `DateClosed` date NOT NULL,
-  `NetworkDays` int(11) NOT NULL,
-  `QuantityRejected` int(11) NOT NULL,
-  `PRSSendDate` int(11) NOT NULL,
-  `PRSReceived` text NOT NULL,
-  `RejectNote` char(9) NOT NULL,
-  `DefectCode` tinytext NOT NULL,
-  `QualityConcern` longtext NOT NULL,
-  `Status` tinytext NOT NULL,
-  `DebitNote` char(9) NOT NULL,
-  `ScrapDate` date NOT NULL,
-  `Notes` longtext NOT NULL
+CREATE TABLE "8d" (
+  "QNumber" char(9) NOT NULL,
+  "PartNumber" longtext DEFAULT NULL,
+  "DrawingNumber" longtext DEFAULT NULL,
+  "Originator" tinytext DEFAULT NULL,
+  "Customer" tinytext DEFAULT NULL,
+  "SerialNumber" tinytext DEFAULT NULL,
+  "SalesNumber" tinytext DEFAULT NULL,
+  "Description" longtext DEFAULT NULL,
+  "DateAdded" date NOT NULL,
+  "DateClosed" date NOT NULL,
+  "NetworkDays" int(11) NOT NULL,
+  "QuantityRejected" int(11) NOT NULL,
+  "PRSSendDate" int(11) NOT NULL,
+  "PRSReceived" text NOT NULL,
+  "RejectNote" char(9) NOT NULL,
+  "DefectCode" tinytext NOT NULL,
+  "QualityConcern" longtext NOT NULL,
+  "Status" tinytext NOT NULL,
+  "DebitNote" char(9) NOT NULL,
+  "ScrapDate" date NOT NULL,
+  "Notes" longtext NOT NULL
 )
 
 
-CREATE TABLE `cn` (
-  `QNumber` char(9) NOT NULL,
-  `PartNumber` longtext DEFAULT NULL,
-  `DrawingNumber` longtext DEFAULT NULL,
-  `Originator` tinytext DEFAULT NULL,
-  `Customer` tinytext DEFAULT NULL,
-  `SerialNumber` tinytext DEFAULT NULL,
-  `SalesNumber` tinytext DEFAULT NULL,
-  `Description` longtext DEFAULT NULL,
-  `DateAdded` date NOT NULL,
-  `DateClosed` date NOT NULL,
-  `LiveDays` int(11) NOT NULL,
-  `ClosedBy` tinytext NOT NULL
+CREATE TABLE "cn" (
+  "QNumber" char(9) NOT NULL,
+  "PartNumber" longtext DEFAULT NULL,
+  "DrawingNumber" longtext DEFAULT NULL,
+  "Originator" tinytext DEFAULT NULL,
+  "Customer" tinytext DEFAULT NULL,
+  "SerialNumber" tinytext DEFAULT NULL,
+  "SalesNumber" tinytext DEFAULT NULL,
+  "Description" longtext DEFAULT NULL,
+  "DateAdded" date NOT NULL,
+  "DateClosed" date NOT NULL,
+  "LiveDays" int(11) NOT NULL,
+  "ClosedBy" tinytext NOT NULL
 )
 
 
-CREATE TABLE `main` (
-  `QNumber` char(9) NOT NULL,
-  `PartNumber` longtext DEFAULT NULL,
-  `DrawingNumber` longtext DEFAULT NULL,
-  `Originator` tinytext DEFAULT NULL,
-  `Customer` tinytext DEFAULT NULL,
-  `SerialNumber` tinytext DEFAULT NULL,
-  `SalesNumber` tinytext DEFAULT NULL,
-  `Description` longtext DEFAULT NULL,
-  `DateAdded` date DEFAULT NULL,
-  `RU` tinyint(1) DEFAULT NULL,
-  `CU` tinyint(1) DEFAULT NULL,
-  `8D` tinyint(1) DEFAULT NULL,
-  `CN` tinyint(1) DEFAULT NULL,
-  `ECNDR` tinyint(1) DEFAULT NULL,
-  `ISIR` tinyint(1) DEFAULT NULL,
-  `PSW` tinyint(1) DEFAULT NULL,
-  `ELV` tinyint(1) DEFAULT NULL,
-  `RFQ` tinyint(1) DEFAULT NULL,
-  `NPI` tinyint(1) DEFAULT NULL,
-  `CofC` tinyint(1) DEFAULT NULL,
-  `TestCert` tinyint(1) DEFAULT NULL,
-  `Concession` tinyint(1) DEFAULT NULL,
-  `DesignReview` tinyint(1) DEFAULT NULL,
-  `StockFreeze` tinyint(1) DEFAULT NULL,
-  `RejectNote` tinyint(1) DEFAULT NULL,
-  `StopNote` tinyint(1) DEFAULT NULL,
-  `QualityAlert` tinyint(1) DEFAULT NULL,
-  `DebitNote` tinyint(1) DEFAULT NULL,
-  `ASME` tinyint(1) NOT NULL,
-  `Other` tinyint(1) DEFAULT NULL
+CREATE TABLE "main" (
+  "QNumber" char(9) NOT NULL,
+  "PartNumber" longtext DEFAULT NULL,
+  "DrawingNumber" longtext DEFAULT NULL,
+  "Originator" tinytext DEFAULT NULL,
+  "Customer" tinytext DEFAULT NULL,
+  "SerialNumber" tinytext DEFAULT NULL,
+  "SalesNumber" tinytext DEFAULT NULL,
+  "Description" longtext DEFAULT NULL,
+  "DateAdded" date DEFAULT NULL,
+  "RU" tinyint(1) DEFAULT NULL,
+  "CU" tinyint(1) DEFAULT NULL,
+  "8D" tinyint(1) DEFAULT NULL,
+  "CN" tinyint(1) DEFAULT NULL,
+  "ECNDR" tinyint(1) DEFAULT NULL,
+  "ISIR" tinyint(1) DEFAULT NULL,
+  "PSW" tinyint(1) DEFAULT NULL,
+  "ELV" tinyint(1) DEFAULT NULL,
+  "RFQ" tinyint(1) DEFAULT NULL,
+  "NPI" tinyint(1) DEFAULT NULL,
+  "CofC" tinyint(1) DEFAULT NULL,
+  "TestCert" tinyint(1) DEFAULT NULL,
+  "Concession" tinyint(1) DEFAULT NULL,
+  "DesignReview" tinyint(1) DEFAULT NULL,
+  "StockFreeze" tinyint(1) DEFAULT NULL,
+  "RejectNote" tinyint(1) DEFAULT NULL,
+  "StopNote" tinyint(1) DEFAULT NULL,
+  "QualityAlert" tinyint(1) DEFAULT NULL,
+  "DebitNote" tinyint(1) DEFAULT NULL,
+  "ASME" tinyint(1) NOT NULL,
+  "Other" tinyint(1) DEFAULT NULL
 )
 
 
-CREATE TABLE `rfq` (
-  `QNumber` char(9) NOT NULL,
-  `PartNumber` longtext DEFAULT NULL,
-  `DrawingNumber` longtext DEFAULT NULL,
-  `Originator` tinytext DEFAULT NULL,
-  `Customer` tinytext DEFAULT NULL,
-  `SerialNumber` tinytext DEFAULT NULL,
-  `SalesNumber` tinytext DEFAULT NULL,
-  `Description` longtext DEFAULT NULL,
-  `DateAdded` date DEFAULT NULL,
-  `ClosingDate` date NOT NULL,
-  `Supplier1` tinytext NOT NULL,
-  `Quoted1` tinyint(1) NOT NULL,
-  `Supplier2` tinytext NOT NULL,
-  `Quoted2` tinyint(1) NOT NULL,
-  `Supplier3` tinytext NOT NULL,
-  `Quoted3` tinyint(1) NOT NULL
+CREATE TABLE "rfq" (
+  "QNumber" char(9) NOT NULL,
+  "PartNumber" longtext DEFAULT NULL,
+  "DrawingNumber" longtext DEFAULT NULL,
+  "Originator" tinytext DEFAULT NULL,
+  "Customer" tinytext DEFAULT NULL,
+  "SerialNumber" tinytext DEFAULT NULL,
+  "SalesNumber" tinytext DEFAULT NULL,
+  "Description" longtext DEFAULT NULL,
+  "DateAdded" date DEFAULT NULL,
+  "ClosingDate" date NOT NULL,
+  "Supplier1" tinytext NOT NULL,
+  "Quoted1" tinyint(1) NOT NULL,
+  "Supplier2" tinytext NOT NULL,
+  "Quoted2" tinyint(1) NOT NULL,
+  "Supplier3" tinytext NOT NULL,
+  "Quoted3" tinyint(1) NOT NULL
 )
 
 
-CREATE TABLE `ru` (
-  `QNumber` char(9) NOT NULL,
-  `PartNumber` longtext DEFAULT NULL,
-  `DrawingNumber` longtext DEFAULT NULL,
-  `Originator` tinytext DEFAULT NULL,
-  `Customer` tinytext DEFAULT NULL,
-  `SerialNumber` tinytext DEFAULT NULL,
-  `SalesNumber` tinytext DEFAULT NULL,
-  `Description` longtext DEFAULT NULL,
-  `DateAdded` date NOT NULL,
-  `Type` tinytext NOT NULL,
-  `ReturnNumber` tinytext NOT NULL,
-  `DefectCode` tinytext NOT NULL,
-  `Status` tinytext NOT NULL,
-  `TotalQuantity` int(11) NOT NULL,
-  `QuantityAccepted` int(11) NOT NULL,
-  `QuantityRejected` int(11) NOT NULL,
-  `RejectNote` char(9) NOT NULL,
-  `DebitNote` char(9) NOT NULL,
-  `ClaimValue` tinytext NOT NULL,
-  `ScrapDate` date NOT NULL,
-  `Notes` longtext NOT NULL
+CREATE TABLE "ru" (
+  "QNumber" char(9) NOT NULL,
+  "PartNumber" longtext DEFAULT NULL,
+  "DrawingNumber" longtext DEFAULT NULL,
+  "Originator" tinytext DEFAULT NULL,
+  "Customer" tinytext DEFAULT NULL,
+  "SerialNumber" tinytext DEFAULT NULL,
+  "SalesNumber" tinytext DEFAULT NULL,
+  "Description" longtext DEFAULT NULL,
+  "DateAdded" date NOT NULL,
+  "Type" tinytext NOT NULL,
+  "ReturnNumber" tinytext NOT NULL,
+  "DefectCode" tinytext NOT NULL,
+  "Status" tinytext NOT NULL,
+  "TotalQuantity" int(11) NOT NULL,
+  "QuantityAccepted" int(11) NOT NULL,
+  "QuantityRejected" int(11) NOT NULL,
+  "RejectNote" char(9) NOT NULL,
+  "DebitNote" char(9) NOT NULL,
+  "ClaimValue" tinytext NOT NULL,
+  "ScrapDate" date NOT NULL,
+  "Notes" longtext NOT NULL
 )
 
 
-ALTER TABLE `cn`
-  ADD PRIMARY KEY (`QNumber`),
-  ADD UNIQUE KEY `QNumber` (`QNumber`);
+ALTER TABLE "cn"
+  ADD PRIMARY KEY ("QNumber"),
+  ADD UNIQUE KEY "QNumber" ("QNumber");
 
 
-ALTER TABLE `main`
-  ADD PRIMARY KEY (`QNumber`),
-  ADD UNIQUE KEY `QNumber` (`QNumber`);
+ALTER TABLE "main"
+  ADD PRIMARY KEY ("QNumber"),
+  ADD UNIQUE KEY "QNumber" ("QNumber");
 
 
-ALTER TABLE `rfq`
-  ADD PRIMARY KEY (`QNumber`),
-  ADD UNIQUE KEY `QNumber` (`QNumber`);
+ALTER TABLE "rfq"
+  ADD PRIMARY KEY ("QNumber"),
+  ADD UNIQUE KEY "QNumber" ("QNumber");
 
 
-ALTER TABLE `ru`
-  ADD PRIMARY KEY (`QNumber`),
-  ADD UNIQUE KEY `QNumber` (`QNumber`);
+ALTER TABLE "ru"
+  ADD PRIMARY KEY ("QNumber"),
+  ADD UNIQUE KEY "QNumber" ("QNumber");
 
 
-ALTER TABLE `8d`
-  ADD PRIMARY KEY (`QNumber`),
-  ADD UNIQUE KEY `QNumber` (`QNumber`);
+ALTER TABLE "8d"
+  ADD PRIMARY KEY ("QNumber"),
+  ADD UNIQUE KEY "QNumber" ("QNumber");

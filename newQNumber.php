@@ -39,11 +39,10 @@ $SalesNumber = $_POST["SalesNumber"];
 $SerialNumber = $_POST["SerialNumber"];
 
 $Date = $_POST["Date"];
-$CurrentYear = $_POST["CurrentYear"];
-$ShortYear = $CurrentYear[2].$CurrentYear[3];
+$CurrentYear = $_POST["CurrentYear"];	//21
 
-$sql = "SELECT * FROM main WHERE YEAR(DateAdded) = ?";
-//$sql = "SELECT * FROM main WHERE SUBSTRING(QNumber,1,2) = ?";
+//$sql = "SELECT * FROM main WHERE YEAR(DateAdded) = ?";
+$sql = "SELECT * FROM main WHERE SUBSTRING(QNumber,2,2) = ?";
 $stmt = mysqli_stmt_init($conn);
 
 if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -54,14 +53,15 @@ if(!mysqli_stmt_prepare($stmt, $sql)){
 mysqli_stmt_bind_param($stmt, "s", $CurrentYear); //This copies in the year to find
 mysqli_stmt_execute($stmt);
 mysqli_stmt_store_result($stmt);
-$EntryNumber = mysqli_stmt_num_rows($stmt) + 1;
+$EntryNumber = mysqli_stmt_num_rows($stmt);
+
 
 $EntryNumber = (string) $EntryNumber;
 while (strlen($EntryNumber) < 5) {
     $EntryNumber = "0".$EntryNumber;
 }
 
-$QNumber = "Q".$ShortYear."-".$EntryNumber;
+$QNumber = "Q".$CurrentYear."-".$EntryNumber;
 
 
 
