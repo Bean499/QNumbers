@@ -1,7 +1,7 @@
 <?php
 
 if(!isset($_POST["qNumber"])) {
-    header("Location: CN.html?error=NoSubmit");
+    header("Location: editQNumber.html?error=NoSubmit");
     exit();
 }
 
@@ -9,7 +9,7 @@ require "../dbaccess.php";
 
 $qNumber = $_POST["qNumber"];
 
-$sql = "SELECT * FROM cn WHERE QNumber = ?";
+$sql = "SELECT * FROM main WHERE QNumber = ?";
 $stmt = mysqli_stmt_init($conn);
 
 mysqli_stmt_prepare($stmt, $sql);

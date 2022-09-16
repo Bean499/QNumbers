@@ -56,7 +56,8 @@ $("#findQNumber").click(function() {
                         $("#QualityAlert").attr("checked",row[26]);
                         $("#DebitNote").attr("checked",row[27]);
                         $("#ASME").attr("checked",row[28]);
-                        $("#Other").attr("checked",row[29]);
+                        $("#PR").attr("checked",row[29]);
+                        $("#Other").attr("checked",row[30]);
                     }
                 )
             }
@@ -97,6 +98,7 @@ $("#submit").click(function(){
         "QualityAlert": $("#QualityAlert").is(':checked'),
         "DebitNote": $("#DebitNote").is(':checked'),
         "ASME": $("#ASME").is(':checked'),
+        "PR": $("#PR").is(':checked'),
         "Other": $("#Other").is(':checked'),
     }
     

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html>
-
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="../style.css">
@@ -15,6 +14,8 @@
             <b>Thermex Q Numbers</b>
             <a href="../index.html">New Q Number</a>
             <a href="../editQNumber/editQNumber.html">Edit Q Number</a>
+            <a href="deleteQNumber.html">Delete Q Number</a>
+            <!-- <a href="../deleteQNumber/deleteQNumber.html">Delete Q Number</a> -->
             <a href="../TableView/tableview.html">Table View</a>
             <a href="../Search/search.html">Search Q Numbers</a>
             <a href="../RFQ/RFQ.html">RFQ</a>
@@ -23,23 +24,29 @@
             <a href="../8D/8D.html">8D Report</a>
         </div>
         <div class="intro">
-            This page lets you make an entry in the CN table. Enter a Q Number, and if it is a Q Number which is an CN, you will be able to either make an entry if it does not have one, or modify its existing entry.
-            <br><a href="CNTable.html">Click here to view all Content Notes in a table</a>
+            This page "deletes" a Q Number by setting all of its fields to be blank. Enter the desired Q Number and its details will be displayed to you so that you can check you are deleting the correct one.
         </div>
         <br><label for="qNumber"></label>
         <input type="text" id="qNumber" maxlength="9" placeholder="Q Number"></br>
-        <button type="submit" id="findCN">Find Q Number</button>
-        <div id="selected"></div>
-        <div id="form">
-            <label for="DateClosed">Date Closed:</label>
-            <input type="date" id="DateClosed"> <br>
+        <button type="submit" id="findQNumber">Find Q Number</button>
 
-            <label for="ClosedBy">Closed By:</label>
-            <input type="text" id="ClosedBy" placeholder="Closed By">
-
-            <button type="submit" id="submit">Submit</button>
-        </div>
-        <script src="findCN.js"></script>
+        <div id="selected">
+			<div id="details">
+				<div id="q"></div>
+				<div id="PartNumber"></div>
+				<div id="DrawingNumber"></div>
+				<div id="Originator"></div>
+				<div id="Customer"></div>
+				<div id="SerialNumber"></div>
+				<div id="SalesNumber"></div>
+				<div id="Description"></div>
+				<div id="types"></div>
+			</div>
+			<div id="confirm">
+				<p>Are you sure you want to delete <span id="confirmmsg"></span>?</p>
+				<button type="submit" id="deletebutton">Delete</button>
+			</div>
+		</div>
+		<script src="deleteQNumber.js"></script>
     </body>
-
 </html>

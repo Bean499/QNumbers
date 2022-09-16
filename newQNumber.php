@@ -34,6 +34,7 @@ $StopNote = $_POST["StopNote"];
 $QualityAlert = $_POST["QualityAlert"];
 $DebitNote = $_POST["DebitNote"];
 $ASME = $_POST["ASME"];
+$ASME = $_POST["PR"];
 $Other = $_POST["Other"];
 $SalesNumber = $_POST["SalesNumber"];
 $SerialNumber = $_POST["SerialNumber"];
@@ -65,11 +66,11 @@ $QNumber = "Q".$CurrentYear."-".$EntryNumber;
 
 
 
-$sql = "INSERT INTO main (QNumber, PartNumber, DateAdded, RU, CU, 8D, CN, ECNDR, ISIR, PSW, ELV, RFQ, NPI, CofC, TestCert, Concession, DesignReview, StockFreeze, RejectNote, StopNote, QualityAlert, DebitNote, ASME, Other, DrawingNumber, Description, Originator, Customer, SalesNumber, SerialNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO main (QNumber, PartNumber, DateAdded, RU, CU, 8D, CN, ECNDR, ISIR, PSW, ELV, RFQ, NPI, CofC, TestCert, Concession, DesignReview, StockFreeze, RejectNote, StopNote, QualityAlert, DebitNote, ASME, PR, Other, DrawingNumber, Description, Originator, Customer, SalesNumber, SerialNumber) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 $stmt = mysqli_stmt_init($conn);
 
 mysqli_stmt_prepare($stmt, $sql);
-mysqli_stmt_bind_param($stmt, "sssiiiiiiiiiiiiiiiiiiiiissssss", $QNumber, $PartNumber, $Date, $RU, $CU, $D8, $CN, $ECNDR, $ISIR, $PSW, $ELV, $RFQ, $NPI, $CofC, $TestCert, $Concession, $DesignReview, $StockFreeze, $RejectNote, $StopNote, $QualityAlert, $DebitNote, $ASME, $Other, $DrawingNumber, $Description, $Originator, $Customer, $SalesNumber, $SerialNumber);
+mysqli_stmt_bind_param($stmt, "sssiiiiiiiiiiiiiiiiiiiiiissssss", $QNumber, $PartNumber, $Date, $RU, $CU, $D8, $CN, $ECNDR, $ISIR, $PSW, $ELV, $RFQ, $NPI, $CofC, $TestCert, $Concession, $DesignReview, $StockFreeze, $RejectNote, $StopNote, $QualityAlert, $DebitNote, $ASME, $PR, $Other, $DrawingNumber, $Description, $Originator, $Customer, $SalesNumber, $SerialNumber);
 
 $check = mysqli_stmt_execute($stmt);
 
@@ -81,8 +82,8 @@ else {
     echo ($QNumber." successfully created.");
 }
 
-$year = substr($QNumber,0,3);   //Q21-00000
-$hundred = substr($QNumber,0,7)."00";   //Q21-12300
+//$year = substr($QNumber,0,3);   //Q21-00000
+//$hundred = substr($QNumber,0,7)."00";   //Q21-12300
 //Q21-12345
 
 $directory = "D:/Workgroups/Quality & HSE/Q Numbers/".$year."/".$hundred."/"."/".$QNumber;

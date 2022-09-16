@@ -33,17 +33,18 @@ $StopNote = $_POST["StopNote"];
 $QualityAlert = $_POST["QualityAlert"];
 $DebitNote = $_POST["DebitNote"];
 $ASME = $_POST["ASME"];
+$PR = $_POST["PR"];
 $Other = $_POST["Other"];
 $SalesNumber = $_POST["SalesNumber"];
 $SerialNumber = $_POST["SerialNumber"];
 
 
 
-$sql = "UPDATE main SET PartNumber = ?, RU = ?, CU = ?, 8D = ?, CN = ?, ECNDR = ?, ISIR = ?, PSW = ?, ELV = ?, RFQ = ?, NPI = ?, CofC = ?, TestCert = ?, Concession = ?, DesignReview = ?, StockFreeze = ?, RejectNote = ?, StopNote = ?, QualityAlert = ?, DebitNote = ?, ASME = ?, Other = ?, DrawingNumber = ?, Description = ?, Originator = ?, Customer = ?, SalesNumber = ?, SerialNumber = ? WHERE QNumber = ?";
+$sql = "UPDATE main SET PartNumber = ?, RU = ?, CU = ?, 8D = ?, CN = ?, ECNDR = ?, ISIR = ?, PSW = ?, ELV = ?, RFQ = ?, NPI = ?, CofC = ?, TestCert = ?, Concession = ?, DesignReview = ?, StockFreeze = ?, RejectNote = ?, StopNote = ?, QualityAlert = ?, DebitNote = ?, ASME = ?, PR = ?, Other = ?, DrawingNumber = ?, Description = ?, Originator = ?, Customer = ?, SalesNumber = ?, SerialNumber = ? WHERE QNumber = ?";
 $stmt = mysqli_stmt_init($conn);
 
 mysqli_stmt_prepare($stmt, $sql);
-mysqli_stmt_bind_param($stmt, "siiiiiiiiiiiiiiiiiiiiisssssss", $PartNumber, $RU, $CU, $D8, $CN, $ECNDR, $ISIR, $PSW, $ELV, $RFQ, $NPI, $CofC, $TestCert, $Concession, $DesignReview, $StockFreeze, $RejectNote, $StopNote, $QualityAlert, $DebitNote, $ASME, $Other, $DrawingNumber, $Description, $Originator, $Customer, $SalesNumber, $SerialNumber, $QNumber);
+mysqli_stmt_bind_param($stmt, "siiiiiiiiiiiiiiiiiiiiiisssssss", $PartNumber, $RU, $CU, $D8, $CN, $ECNDR, $ISIR, $PSW, $ELV, $RFQ, $NPI, $CofC, $TestCert, $Concession, $DesignReview, $StockFreeze, $RejectNote, $StopNote, $QualityAlert, $DebitNote, $ASME, $PR, $Other, $DrawingNumber, $Description, $Originator, $Customer, $SalesNumber, $SerialNumber, $QNumber);
 
 $check = mysqli_stmt_execute($stmt);
 

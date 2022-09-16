@@ -47,6 +47,7 @@ $("#newQNumber").click( function() {
         "QualityAlert": $("#QualityAlert").is(':checked'),
         "DebitNote": $("#DebitNote").is(':checked'),
         "ASME": $("#ASME").is(':checked'),
+        "PR": $("#PR").is(':checked'),
         "Other": $("#Other").is(':checked'),
 
         "Date": date,
