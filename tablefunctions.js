@@ -1,12 +1,13 @@
 ﻿function listSplit(data, type) {
     list = data.split(" % ");
     list.splice(list.length-1,1);
+console.log(list);
     for(i=0; i < list.length; i++){
         list[i] = list[i].split(" | ")
         list[i].splice(list[i].length-1,1);
         if(type == "main") {
             for(ii=0; ii < list[i].length; ii++) {
-                if (ii < 30 && ii > 7) {
+                if (ii < 31 && ii > 7) {
                     if (list[i][ii] == 1) {
                         list[i][ii] = "✓"
                     }
@@ -29,6 +30,7 @@
             }
         }
     }
+console.log(list);
     return list
 }
 
