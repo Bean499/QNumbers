@@ -11,12 +11,12 @@ $QNumber = $_POST["qNumber"];
 
 
 
-$sql = "UPDATE main SET PartNumber = ?, RU = ?, CU = ?, 8D = ?, CN = ?, ECNDR = ?, ISIR = ?, PSW = ?, ELV = ?, RFQ = ?, NPI = ?, CofC = ?, TestCert = ?, Concession = ?, DesignReview = ?, StockFreeze = ?, RejectNote = ?, StopNote = ?, QualityAlert = ?, DebitNote = ?, ASME = ?, Other = ?, DrawingNumber = ?, Description = ?, Originator = ?, Customer = ?, SalesNumber = ?, SerialNumber = ? WHERE QNumber = ?";
+$sql = "UPDATE main SET PartNumber = ?, RU = ?, CU = ?, 8D = ?, CN = ?, ECNDR = ?, ISIR = ?, PSW = ?, ELV = ?, RFQ = ?, NPI = ?, CofC = ?, TestCert = ?, Concession = ?, DesignReview = ?, StockFreeze = ?, RejectNote = ?, StopNote = ?, QualityAlert = ?, DebitNote = ?, ASME = ?, PR = ?, Other = ?, DrawingNumber = ?, Description = ?, Originator = ?, Customer = ?, SalesNumber = ?, SerialNumber = ? WHERE QNumber = ?";
 $stmt = mysqli_stmt_init($conn);
 
 mysqli_stmt_prepare($stmt, $sql);
-mysqli_stmt_bind_param($stmt, "siiiiiiiiiiiiiiiiiiiiisssssss", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, " ", " ", " ", " ", " ", " ", $QNumber);
-
+mysqli_stmt_bind_param($stmt, "siiiiiiiiiiiiiiiiiiiiiisssssss", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, " ", " ", " ", " ", " ", " ", $QNumber);
+ 
 $check = mysqli_stmt_execute($stmt);
 
 if ($check === FALSE) {
